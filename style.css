@@ -149,8 +149,8 @@ a:hover {
 /* SECTIONS */
 
 section {
-  padding-top: 4vh;
-  height: 96vh;
+  padding-top: 1vh;
+  height: 75vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -171,8 +171,8 @@ section {
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   margin: auto 0;
 }
 
@@ -268,13 +268,13 @@ section {
 }
 
 .about-containers {
-  gap: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .about-details-container {
-  justify-content: center;
+  justify-content: right;
   flex-direction: column;
 }
 
@@ -285,6 +285,9 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  margin-top: 0.5rem;
+  height:50vh;
+
 }
 
 .arrow {
@@ -294,7 +297,7 @@ section {
 }
 
 .details-container {
-  padding: 1.5rem;
+  padding: 1.2rem;
   flex: 1;
   background: white;
   border-radius: 2rem;
@@ -309,25 +312,25 @@ section {
 }
 
 .section__pic-container {
-  height: 400px;
-  width: 400px;
+  height: 700px;
+  width: 700px;
   margin: auto 0;
 }
 
-/* EXPERIENCE SECTION */
+/* Research SECTION */
 
-#experience {
+#research {
   position: relative;
 }
 
-.experience-sub-title {
+.research-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
 
-.experience-details-container {
+.research-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
