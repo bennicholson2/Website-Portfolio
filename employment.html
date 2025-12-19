@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Benjamin Nicholson</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="employment.html">Employment</a></li>
+          <li><a href="trading.html">Trading</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Benjamin Nicholson</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#research" onclick="toggleMenu()">Research</a></li>
+          <li><a href="#trading" onclick="toggleMenu()">Trading</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <section id="experience">
+      <p class="section__text__p1">Explore My Professional</p>
+      <h1 class="title">Employment</h1>
+      
+      <div class="experience-list-wrapper">
+        
+        <div class="details-sub-container experience-row">
+          <div class="experience-header">
+            <img src="./assets/setonhill.png" alt="Seton Hill logo" class="icon" />
+            <div class="experience-title-block">
+              <h3>Seton Hill University</h3>
+              <p><b>Database Engineer Intern</b></p>
+              <p class="experience-date">Summer 2025</p>
+            </div>
+          </div>
+          <div class="experience-description">
+            <ul>
+              <li>Designed and deployed a normalized SQL Server database utilizing SQLAlchemy to architect a real-time tracking system for 10,000+ student engagement records.</li>
+              <li>Optimized data retrieval by generating complex SQL queries featuring CTEs, multi-level joins, and subqueries to build high-performance reporting views.</li>
+              <li>Integrated database with Apache Superset to develop live, interactive dashboards for participation analysis.</li>
+            </ul>
+          </div>
+        </div>
+    
+        <div class="details-sub-container experience-row">
+          <div class="experience-header">
+            <img src="./assets/cmmb_img.png" alt="CMMB logo" class="icon" />
+            <div class="experience-title-block">
+              <h3>CMMB</h3>
+              <p><b>Data Analyst Intern</b></p>
+              <p class="experience-date">Sept 2024 – Mar 2025</p>
+            </div>
+          </div>
+          <div class="experience-description">
+            <ul>
+              <li>Developed donor segmentation models using clustering algorithms and statistical analysis in Python, helped boost donor rates by 20% YoY.</li>
+              <li>Calculated Customer Lifetime Value (CLV) and retention rates to optimize fundraising strategy and donation stream forecasting.</li>
+              <li>Conducted an extensive data quality audit of 1M+ records, identifying and resolving 50k+ data integrity errors within a normalized database.</li>
+            </ul>
+          </div>
+        </div>
+    
+      </div>
+    </section>
+
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="employment.html">Employment</a></li>
+            <li><a href="trading.html">Trading</a></li>
+            <li><a href="projects.html">Projects</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Benjamin Nicholson. All Rights Reserved.</p>
+    </footer>
+

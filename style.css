@@ -33,6 +33,13 @@ nav,
   display: flex;
 }
 
+.nav-links a:hover {
+  transform: none; 
+  color: grey;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
 nav {
   justify-content: space-around;
   align-items: center;
@@ -51,11 +58,25 @@ a {
   text-decoration-color: white;
 }
 
-a:hover {
-  color: grey;
-  text-decoration: underline;
-  text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+.details-sub-container, 
+.project-img,
+.details-container {
+  transition: all 300ms ease; 
+  cursor: pointer;
+}
+
+.bubble-link {
+  text-decoration: none;
+  color: inherit; 
+  display: block; 
+}
+
+.details-sub-container:hover, 
+.project-img:hover,
+.details-container:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  border-color: #353535; 
 }
 
 .logo {
@@ -169,13 +190,6 @@ section {
   height: 80vh;
 }
 
-.section__pic-container {
-  display: flex;
-  height: 300px;
-  width: 300px;
-  margin: auto 0;
-}
-
 .section__text {
   align-self: center;
   text-align: center;
@@ -201,9 +215,15 @@ section {
 
 #socials-container {
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
   gap: 1rem;
+}
+
+.cta-social-wrapper {
+  display: flex;
+  align-items: center;    /* Keeps everything level vertically */
+  justify-content: center; /* Centers the whole group in the section */
+  gap: 1.5rem;            /* Spacing between the button and the icons */
+  margin-top: 1rem;
 }
 
 /* ICONS */
@@ -227,6 +247,25 @@ section {
   padding: 1rem;
   width: 8rem;
   border-radius: 2rem;
+  transition: all 300ms ease;
+}
+
+.btn:hover,
+.icon:hover,
+.details-sub-container:hover {
+  transform: scale(1.05); /* Uniform scale for consistency */
+  transition: all 300ms ease;
+  cursor: pointer;
+}
+
+.btn:active,
+.icon:active {
+  transform: scale(0.95); 
+  transition: all 100ms ease;
+}
+
+.icon:hover {
+  transition: all 300ms ease
 }
 
 .btn-color-1,
@@ -268,6 +307,7 @@ section {
 }
 
 .about-containers {
+  display: flex;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
   margin-top: 0.5rem;
@@ -275,19 +315,35 @@ section {
 
 .about-details-container {
   justify-content: right;
-  flex-direction: column;
+  flex-direction: column; 
 }
 
 .about-containers,
 .about-details-container {
   display: flex;
+  margin-bottom: 2rem;
+  margin-top:2rem
+}
+
+.about-quote {
+  margin-top: 0.5rem;    
+  color: #555;         
 }
 
 .about-pic {
-  border-radius: 2rem;
-  margin-top: 0.5rem;
-  height:50vh;
+  width: 100%;           
+  height: auto;          
+  max-width: 450px;      
+  border-radius: 2rem;   
+  object-fit: cover;    
+}
 
+.group-pic{
+  width: 100%;           
+  height: auto;          
+  max-width: 450px;      
+  border-radius: 2rem;   
+  object-fit: cover;     
 }
 
 .arrow {
@@ -296,14 +352,24 @@ section {
   bottom: 2.5rem;
 }
 
-.details-container {
-  padding: 1.2rem;
+.details-large-container {
+  display:flex;
   flex: 1;
+  gap:1.5rem;
+  flex-direction:column;
+}
+
+.details-sub-container {
+  padding:1.0rem;
   background: white;
   border-radius: 2rem;
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+
+  justify-content: center;
+  flex-direction:column;
+  flex:1
 }
 
 .section-container {
@@ -312,9 +378,11 @@ section {
 }
 
 .section__pic-container {
-  height: 700px;
-  width: 700px;
-  margin: auto 0;
+  display:flex;
+  flex-direction: column;
+  align-items: center;;
+  justify-content: center;
+  flex:1;
 }
 
 /* Research SECTION */
@@ -354,6 +422,125 @@ article {
 
 article .icon {
   cursor: default;
+}
+
+/* Employment Section */
+/* Container for the vertical list */
+.experience-list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Transform the bubble into a wide row */
+.experience-row {
+  display: flex;
+  flex-direction: row; /* Side-by-side layout */
+  align-items: flex-start;
+  text-align: left; /* Left align text for better readability */
+  padding: 2.5rem;
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Header section (Logo + Title) */
+.experience-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 250px;
+  text-align: center;
+}
+
+.experience-title-block h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.experience-date {
+  font-size: 0.9rem;
+  color: rgb(110, 110, 110);
+}
+
+/* Description section (Bullets) */
+.experience-description {
+  flex: 1;
+  border-left: 2px solid rgb(230, 230, 230); /* Subtle divider line */
+  padding-left: 2rem;
+  margin-top: 0;
+}
+
+.experience-description ul {
+  list-style-type: disc;
+}
+
+.experience-description li {
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
+}
+
+/* Responsive adjustment for mobile */
+@media screen and (max-width: 800px) {
+  .experience-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .experience-description {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid rgb(230, 230, 230);
+    padding-top: 1.5rem;
+  }
+}
+
+/* TRADING SECTION */
+.construction-container {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
+  margin-top: 2rem;
+}
+
+.construction-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  max-width: 800px;
+  background: rgb(250, 250, 250);
+  border: rgb(163, 163, 163) 0.1rem solid;
+  border-radius: 2rem;
+  padding: 3rem;
+  transition: all 300ms ease;
+}
+
+/* Hover effect to match your other boxes */
+.construction-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.construction-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.construction-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.construction-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
 }
 
 /* PROJECTS SECTION */

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Benjamin Nicholson</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="employment.html">Employment</a></li>
+          <li><a href="trading.html">Trading</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Benjamin Nicholson</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+          <li><a href="#employment" onclick="toggleMenu()">Employment</a></li>
+          <li><a href="#trading" onclick="toggleMenu()">Trading</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="quant-trading">
+        <h1 class="title">Quantitative Trading Research</h1>
+        <p class="section__text__p1">Algorithmic Backtesting & Financial Engineering</p>
+            
+            <div class="construction-container">
+              <div class="construction-content">
+                <img 
+                  src="./assets/under-construction.png" 
+                  alt="Trading System Under Construction" 
+                  class="construction-img"
+                />
+                <div class="construction-text">
+                  <h2>System Architecture in Progress</h2>
+                  <p>
+                  </p>
+                  <p>Stay tuned for backtesting results and strategy whitepapers.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <nav>
+              <div class="nav-links-container">
+                <ul class="nav-links">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="employment.html">Employment</a></li>
+                  <li><a href="trading.html">Trading</a></li>
+                  <li><a href="projects.html">Projects</a></li>
+                </ul>
+              </div>
+            </nav>
+            <p>Copyright &#169; 2025 Benjamin Nicholson. All Rights Reserved.</p>
+          </footer>
+    
+
