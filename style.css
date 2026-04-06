@@ -347,6 +347,12 @@ section {
   width: 100%;
 }
 
+@media screen and (min-width: 481px) {
+  #about .about-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 /* Employment row: slightly tighter cards (first pair row only) */
 #about .about-pair-row:first-of-type .about-cards-grid {
   gap: 0.75rem;

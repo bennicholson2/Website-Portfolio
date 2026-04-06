@@ -111,9 +111,6 @@
       height: auto;
       max-height: none;
     }
-    .about-cards-grid {
-      grid-template-columns: 1fr;
-    }
     .section__text__p2 {
       font-size: 1.25rem;
     }
@@ -122,5 +119,12 @@
     }
     .text-container {
       text-align: justify;
+    }
+  }
+
+  /* About card grids: single column only on very narrow screens (keeps 2x2 Employment on landscape phones / small tablets) */
+  @media screen and (max-width: 480px) {
+    .about-cards-grid {
+      grid-template-columns: 1fr;
     }
   }
