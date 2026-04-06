@@ -347,6 +347,12 @@ section {
   width: 100%;
 }
 
+/* Lets the grid shrink inside flex parents (avoids odd 1-column behavior in some browsers) */
+#about .about-cards-grid {
+  min-width: 0;
+  box-sizing: border-box;
+}
+
 @media screen and (min-width: 481px) {
   #about .about-cards-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

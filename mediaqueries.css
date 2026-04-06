@@ -122,9 +122,16 @@
     }
   }
 
-  /* About card grids: single column only on very narrow screens (keeps 2x2 Employment on landscape phones / small tablets) */
-  @media screen and (max-width: 480px) {
-    .about-cards-grid {
-      grid-template-columns: 1fr;
-    }
+@media screen and (max-width: 480px) {
+  .about-cards-grid {
+    grid-template-columns: 1fr;
   }
+}
+
+/* Force About grids to 2 columns on laptop/tablet (loads last; overrides single-column rule above) */
+@media screen and (min-width: 481px) {
+  #about .about-cards-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
